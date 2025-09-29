@@ -12,7 +12,9 @@ jobs:
       - name: clone the code
         uses: actions/checkout@v3
       - name: install terraform
-        uses: actions-hub/terraform-cli@v3
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.1.7"
       - name: install awscli
         uses: aws-actions/configure-aws-credentials@v5.0.0
         with:
