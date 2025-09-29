@@ -1,0 +1,17 @@
+name: demo-CI/CD on github-actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone the code
+        uses: actions/checkout@v3
+      - name: setup something
+        run: |
+          chmod +x script.sh
+          ./script.sh
