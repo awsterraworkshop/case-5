@@ -12,9 +12,9 @@ jobs:
       - name: clone the code
         uses: actions/checkout@v3
       - name: install terraform
-        run: actions-hub/terraform-cli@v1
+        uses: actions-hub/terraform-cli@v1
       - name: install awscli
-        run: aws-actions/configure-aws-credentials@v5.0.0
+        uses: aws-actions/configure-aws-credentials@v5.0.0
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
