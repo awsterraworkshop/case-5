@@ -26,4 +26,4 @@ jobs:
           chmod +x script.sh
           ./script.sh
           terraform version
-          aws s3 mb s3://my-unique-bucket-name-123456 --region us-east-1
+          aws s3 ls --region us-east-1
