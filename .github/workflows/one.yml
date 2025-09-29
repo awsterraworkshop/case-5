@@ -17,7 +17,7 @@ jobs:
               run: echo "This is step three"
     job-two:
         runs-on: ubuntu-latest
-        depends-on: job-one
+        needs: job-one
         steps:
             - name: step one
               run: sleep 10 && echo "This is step one"
@@ -27,7 +27,7 @@ jobs:
               run: echo "This is step three"
     job-three:
         runs-on: ubuntu-latest
-        depends-on: job-two
+        needs: [job-one, job-two]
         steps:
             - name: step one
               run: sleep 10 && echo "This is step one"
