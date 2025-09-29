@@ -10,26 +10,26 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: step one
-              run: echo "This is step one"
+              run: sleep 10 && echo "This is step one"
             - name: step two
-              run: echo "This is step two"
+              run: sleep 10 && echo "This is step two"
             - name: step three
               run: echo "This is step three"
     job-two:
         runs-on: ubuntu-latest
         steps:
             - name: step one
-              run: echo "This is step one"
+              run: sleep 10 && echo "This is step one"
             - name: step two
-              run: echo "This is step two"
+              run: sleep 10 && echo "This is step two"
             - name: step three
               run: echo "This is step three"
     job-three:
         runs-on: ubuntu-latest
         steps:
             - name: step one
-              run: echo "This is step one"
+              run: sleep 10 && echo "This is step one"
             - name: step two
-              run: echo "This is step two"
+              run: sleep 10 && echo "This is step two"
             - name: step three
               run: echo "This is step three"
